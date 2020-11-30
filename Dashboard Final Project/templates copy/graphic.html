@@ -1,0 +1,107 @@
+{% extends "material/base.html" %}
+ {% block content %}
+<div class="showcase blue lighten-3">
+  <div class="container pt-5">
+    <div class="row">
+      <div class="col s12 m12 offset-ml center">
+        <h2 class="my-5 font-weight-bolder">Data Visualization</h2>
+        <p></p>
+        <div class="float-left">
+          <a
+            href="{{url_for('index')}}"
+            class="btn btn-small blue white-text waves-effect waves-dark"
+            >Home</a
+          >
+          <a
+            href="{{url_for('dataset')}}"
+            class="btn btn-small blue white-text waves-effect waves-dark"
+            >View Dataset</a
+          >
+
+          <a
+          href="{{url_for('graphic')}}"
+          class="btn btn-small blue white-text waves-effect waves-dark"
+          >Graphic</a
+        >
+         
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<center>
+    <div class="accordion" id="accordionExample">
+
+        <div class="card" style="max-width: 1250px">
+          <div class="card-header bg-secondary" id="headingOne">
+            <h2 class="mb-0">
+              <button class="btn btn-link btn-block  text-white text-center collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Bike Share According to Temperature
+              </button>
+            </h2>
+          </div>     
+          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+            <center><img src="http://127.0.0.1:5000/static/temperature_graphic.PNG" class="img-fluid" alt="Responsive image"></center>
+            </div>
+          </div>
+        </div>
+    <center>
+            <div class="accordion" id="accordionExample">
+        
+                <div class="card" style="max-width: 1250px">
+                  <div class="card-header bg-secondary" id="headingOne">
+                    <h2 class="mb-0">
+                      <button class="btn btn-link btn-block  text-white text-center collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Bike Share per Month
+                      </button>
+                    </h2>
+                  </div>     
+                  <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                    <center><img src="http://127.0.0.1:5000/static/bike_share_permonth.PNG" class="img-fluid" alt="Responsive image"></center>
+                    </div>
+                  </div>
+                </div>
+    <center>
+    <div class="accordion" id="accordionExample">
+
+        <div class="card" style="max-width: 1250px">
+          <div class="card-header bg-secondary" id="headingOne">
+            <h2 class="mb-0">
+              <button class="btn btn-link btn-block  text-white text-center collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Bike Share Per Day
+              </button>
+            </h2>
+          </div>     
+          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+            <center><img src="http://127.0.0.1:5000/static/bike_share_perday.PNG" class="img-fluid" alt="Responsive image"></center>
+            </div>
+          </div>
+        </div>
+        <center>
+          <div class="accordion" id="accordionExample">
+      
+              <div class="card" style="max-width: 1250px">
+                <div class="card-header bg-secondary" id="headingOne">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link btn-block  text-white text-center collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Bike Share Per Hour
+                    </button>
+                  </h2>
+                </div>     
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                  <div class="card-body">
+                  <center><img src="http://127.0.0.1:5000/static/bike_share_perhour.PNG" class="img-fluid" alt="Responsive image"></center>
+                  </div>
+                </div>
+              </div>
+            
+  <center>
+{% endblock %}
+
+{% block scripts %}
+{{super()}}
+{% endblock %}

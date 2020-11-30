@@ -1,0 +1,51 @@
+{% extends "material/base.html" %}
+{% block content %}
+
+<div class="showcase blue lighten-3">
+    <div class="container pt-5">
+      <div class="row">
+        <div class="col s12 m12 offset-ml center">
+          <h2 class="my-5 font-weight-bolder">Dataset</h2>
+          <p></p>
+          <div class="float-left">
+            <a
+              href="{{url_for('index')}}"
+              class="btn btn-small blue white-text waves-effect waves-dark"
+              >Home</a
+            >
+            <a
+              href="{{url_for('dataset')}}"
+              class="btn btn-small blue white-text waves-effect waves-dark"
+              >View Dataset</a
+            >
+  
+            <a
+            href="{{url_for('graphic')}}"
+            class="btn btn-small blue white-text waves-effect waves-dark"
+            >Graphic</a
+          >
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ <br>
+  <center>
+      <h3>Dataset of Bike Share in London</h3>
+  </center>
+  <br>
+    
+    <div class="table-wrapper-scroll-y my-custom-scrollbar" style="max-width: 1250px;margin-left:auto;margin-right:auto;">
+    <table  class="table table-bordered table-striped mb-0">
+ 
+        {{df_view.to_html(classes = "table striped", na_rep = "-")| safe}}
+    </div>
+
+{% endblock %}
+
+{% block scripts %}
+{{super()}}
+{% endblock %}
+
+   
